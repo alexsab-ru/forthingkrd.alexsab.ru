@@ -21,7 +21,7 @@ import socials from '@/data/socials.json';
 ---
 <div
 	x-data="header"
-	class="bg-white sticky top-0 transition-all duration-300 z-50"
+	class="bg-black text-white sticky top-0 transition-all duration-300 z-50"
 	:class="{'shadow-3xl': scrolling}"
 >
 	<header>
@@ -36,7 +36,7 @@ import socials from '@/data/socials.json';
 					{
 						salons.length && salons.map((salon: any, index) => {
 							return index < 2 && (
-						<a href={`tel:${phoneFormat(salon.phone)}`} class="whitespace-nowrap font-extrabold text-black/80 text-base xl:text-lg flex items-center gap-1 flex-nowrap transition-colors hover:text-accent-500" title={salon.name}><Icon name="mdi:cellphone" class="text-xl" /> {salon.phone}</a>
+						<a href={`tel:${phoneFormat(salon.phone)}`} class="whitespace-nowrap font-extrabold text-white/80 text-base xl:text-lg flex items-center gap-1 flex-nowrap transition-colors hover:text-accent-500" title={salon.name}><Icon name="mdi:cellphone" class="text-xl" /> {salon.phone}</a>
 							)
 						})
 					}
@@ -96,7 +96,7 @@ import socials from '@/data/socials.json';
 
 
 {links && (
-	<div id="site_nav" class={'hidden lg:block border-t'+classBottom}>
+	<div id="site_nav" class={'hidden lg:block border-t border-t-white/20'+classBottom}>
 		<div class="container">
 			<div class="flex overflow-x-auto">
 			{
