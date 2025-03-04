@@ -13,7 +13,7 @@ export default defineConfig({
 	trailingSlash: 'always',
 	integrations: [
 		tailwind({
-			configFile: './tailwind.config.js'
+			configFile: './tailwind.forthing.js'
 		}),
 		sitemap(),
 		robots({
