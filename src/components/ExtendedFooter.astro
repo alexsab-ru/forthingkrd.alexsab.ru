@@ -4,7 +4,8 @@ import { YEAR } from '@/js/utils/date';
 import { Icon } from 'astro-icon/components'
 import { phoneFormat } from '@/js/utils/numbers.format';
 const url = `https://alexsab.ru?utm_source=client&utm_medium=${BRAND}&utm_compaing=${SITE_NAME}`
-import salons from '@/data/salons.json';
+import salonsData from '@/data/salons.json';
+const salons = salonsData.filter(salon => !salon.type || salon.type.includes('footer'));
 const path = Astro.url.pathname;
 import logo from '@/components/Logo/logo.svg';
 // SOCIALS
@@ -22,9 +23,9 @@ salons
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-10 md:gap-y-10 lg:gap-y-5">
 
             <div class="">
-                <a href="/" class="uppercase text-2xl inline-block mb-5 transition-opacity hover:opacity-70">{ SITE_NAME }</a>
+                <a href="/" class="uppercase text-2xl inline-block mb-5 transition-opacity hover:opacity-70"><img src="/img/logo-forthing.webp" class="w-auto" alt={SITE_NAME} /></a>
                 <div class="flex flex-wrap items-center gap-5">
-                    <img src={logo.src} class="h-8 w-auto filter brightness-0 invert opacity-70" alt={SITE_NAME} />
+                    <img src={logo.src} class="h-12 w-auto opacity-70" alt={SITE_NAME} />
                 </div>
             </div>
             <div class="">
